@@ -1,0 +1,243 @@
+{% extends 'main/base.html' %}
+
+
+{% block content%}
+
+<div class="container-md bg-dark mt-5 rounded">
+    <div class="heading row pt-3">
+        <div class="col">
+            <h1 class="h_content">Welcome to my Site!</h1>
+        </div>
+    </div>
+    <div class="row-md pt-4 pb-2">
+        <div class="col">
+            <p class="p_content">
+                My Name is Philipp and I'm a science student at Philipps-University Marburg. To show off some of my programming skills, I made this webpage. Here you can catch a glimpse of what I am capable of as Python Delevoper. For creating this site 
+                I chose Django as backend and Bootstrap as frontend frameworks. I even implemented a little tool for sudoku solving for you to play around with and to
+                show off some self coded backend functionality. I hope you will enjoy it. In <a href="#aboutsite"><q>About this site</q></a>, I will go in to much more detail about the different frameworks 
+                and the soduko solving algorithm i chose. Please feel free to check these out, too.
+            </p>
+            <p class="p_content">
+                If you got interested in me as a person, I prepared some more information for you at the <a href="#aboutme">bottom of this page</a>. And if you want to get in touch with me, please check out 
+                my <a href="https://www.xing.com/profile/PhilippMathaeus_Mueller" target="_blank">XING profile</a>. 
+                You will also be able to find me on <a href="https://www.get-in-it.de/" target="_blank">getin-IT</a>. I hope you will enjoy your stay and we will see us soon!
+            </p>
+        </div>
+
+        <div class="col">
+            <h2 class="h_content">About this Site</h2>
+            <p class="p_content">
+                Inside the following drop-down menus, you will find some imformation about different frameworks used for this page and the underlying algorithm for the sudoku solver.
+            </p>
+
+            <div class="accordion accordion-flush bg-dark" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Bootstrap
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png" class="bs_image img-fluid rounded float-left" alt="Bootstrap Logo">
+                        <p class="p_content">
+                            For creating a quick and responsive frontend, I chose Bootstrap as framework. Bootstrap follows the mobile first strategy in web development. It streamlines the process of making
+                            a responsive and easy to use website for all devices. According to the fact that this site is for demonstration purposes only, Bootstrap allowed me to quickly generate this webiste from scratch.
+                            Nevertheless, customization via CSS is possible, so I took some minor styling changes, too. If you want to know more about Bootstrap, just follow this <a href="https://getbootstrap.com/" target="_blank">link to their website</a>.
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Django
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" class="dj_image img-fluid rounded float-left" alt="Bootstrap Logo">
+                        <p class="p_content">
+                            Python in general is a very powerful programming language. Even though, Java is much more prominent for web delevopment, Python should not be considered to be less capable.
+                            Django is a very well documented web framework entirely written in Python. It combines Pythons powerful backend capabilities with dynamic website features, while handling fast and secure
+                            frontend to backend communication. This website was entirely build around Django. Its functionality goes far beyond what can be seen here. To demonstrate the usage of self written
+                            Python code, I implemented a Sudoku Solver down below. All necessary HTML for the Sudoku Solver is dynamically written in Django-HTML. It can easily be transfered to any other Django
+                            website out there. Just as this website itself, all necessary Django-Python-Code was written by me. This includes the code to show this page, the communication with the backend and 
+                            the backend itself, including the sudoku solving algorithm. If you are curious about Django, check out the <a href="https://www.djangoproject.com/" target="_blank">website</a> and its excellent documentation.
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Sudoku Solver
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p class="p_content">
+                            Now I will go into some details about the sudoku solving algorithm. It was entirely written in Python as object oriented and reusable code. To make it
+                            usable by the Django backend, it just has to be imported as library. The core features of the solver are to provide
+                            not just the solving algorithm itself, but also methods to format the given data in both directions, from frontend to backend and vice versa. This
+                            part is crucial for the Django-HTML code to work properly. The goal was to achieve an intuitive and easy to use input form for the sudoku, where
+                            the known numbers can easily be put in the right fields.<br>
+                            As the given input data is transfered to the backend in 9 seperate blocks, the program needs
+                            to rearange these blocks to yield a two dimensional Python list. This list is then passed to the algorithm itself, which tries all different numbers
+                            possible, according to the sudoku rules. And then solves it in an recursive algorithm, trying to find all possible solutions
+                            for the given sudoku. Regardless, if it is actually possible to solve it or not. Thus, I implemented a fail-save, which detects the number of empty
+                            fields. As efficient sudokus, with only one possible solution, should have more then 17 numbers available at start, this approach seemed to be
+                            reasonable. Please feel free to check out the source code on my github.
+                        </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block personal %}
+
+<div class="container-md bg-dark mt-5 rounded">
+    <div class="row-md pt-4">
+        <div class="col">
+            <h2 class="h_content">About me</h2>
+        </div>
+    </div>
+    <div class="profile_row row-md-align-items-center no-gutters pb-2">
+        <div class="col">
+            <p class="p_content">
+                I am Philipp M. Müller and I started programming during my science studies for making my daily tasks more efficient and less time consuming.
+                Soon I took a deep dive into Data Analysis with Python, where I learned to use libraries like numpy, pandas and matplotlib to automate my workflow. Wherever I could,
+                I tried to implement as much of my coding skills into my work as possible. I even started to write useful programs for other students. Then, after being confident in my
+                skills, I decided to work as a programing tutor to teach young people Python and to show them, what can be achieved with this versatile language.
+                Over the past few years I dived into much more topics than just Data Analysis, such as Webdevelopment with Django, Artificial Intelligence and so on. To give a clue
+                of what I am capable of, I created this Django Web Application for you to explore.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+
+
+{% block solver%}
+
+<!-- Sudoku Input -->
+<div class="container-md mt-4 bg-dark rounded sudoku_input" id="sudoku_input">
+    <div class="row pt-4">
+        <div class="col">
+            <h2 class="h_content">Sudoku Solver</h2>
+            <p class="p_content">
+                Welcome to the Sudoku Solver. This program was written by me and can find 
+                any solution of any given Sudoku. Note that some bad designed sudokus may have 
+                more than one possible solution. If the number of solutions exceeds 10, then
+                only the first 10 will be shown, although the algorithm will try to find all of them.
+                This is due to the fact to prevent this website from getting too long.
+            </p>
+            <p class="p_content">
+                You can enter all known sudoku numbers into the form below.
+            </p>
+            {% if failsafe %}
+            <p class="p_failsafe">
+                Fail-Safe was activated. Number of possible solutions is too high. Caltulation was canceled.<br>
+                Please make sure to provide enough numbers for the solving algorithm.
+            </p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row pt-4">
+        <div class="col align-self-center">
+            <form method="post" action="#solver">
+                {% csrf_token %}
+                {% for blockrow in blockrows %}
+                <div class="sudoku_input_row">
+                    {% for blocknumber in blocknumbers %}
+                        <div class="sudoku_input_block">
+                            <table class="sudoku_input_table" id="sudoku_input_table_block_{{blocknumber}}">
+                            {% for linenumber in linenumbers%}
+                                <tr>
+                                {% for fieldnumber in fieldnumbers %}
+                                    <td><input
+                                        class="input_number"
+                                        type="number"
+                                        name="bl-{{blockrow}}-{{blocknumber}}:f-{{linenumber}}-{{fieldnumber}}"
+                                        min="1"
+                                        max="9"></td>
+                                {% endfor %}
+                                </tr>
+                            {% endfor %}
+                            </table>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+
+                <div class="d-grid">
+                    <p class="p_solve_button">
+                        The given Data will not be saved. Please make sure to check the numbers.
+                        Click the button below to start!
+                    </p>
+                    <button type="submit" class="btn btn-outline-primary" name="solve" value="True">Solve</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<!-- Show Solutions -->
+<div class="row pt-4 pb-2">
+    <div class="accordion-collapsed" id="accordionExample">
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="sudokusolutions">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Sudoku Solutions
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+            
+            <!-- Django-HTML Solutions -->
+            {% if show_solution %}
+            <div class="solution_message">
+                <p>Total number of Solutions found: {{number_of_solutions}}</p>
+            </div>
+            <div class="display_solutions" id="display_solutions">
+                {% for sudoku in  solutions%}
+                    <div class="display_sudoku" id="sudoku_{{forloop.counter}}">
+                    <h2 class="sudoku_heading">Solution #{{forloop.counter}}</h2>
+                    {% for segment in sudoku %}
+                        <div class="display_segment">
+                            {% for block in segment %}
+                                <div class="display_block">
+                                    <table class="block_table">
+                                        {% for row in block %}
+                                            <tr>
+                                                {% for entry in row %}
+                                                    <td class="display_number"><span class="black_font">{{entry}}</span></td>
+                                                {% endfor %}
+                                            </tr>
+                                        {% endfor %}
+                                    </table>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+            {% else %}
+            <p>There are currently no solutions available. Please feel free to test the solving algorithm with any sudoku available online or printed!</p>
+            {% endif %}   
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

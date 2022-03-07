@@ -1,0 +1,223 @@
+body {
+    font-family: 'Abel', 'Poppins', 'Roboto', 'Akaya Telivigala', sans-serif;
+    font-size: 20px;
+    color: whitesmoke;
+    /*background: linear-gradient(0deg, rgba(34,135,187,1) 0%, rgba(0,185,199,1) 12%, rgba(203,254,255,1) 14%, rgba(54,173,255,1) 90%) no-repeat;*/
+    background: url("/static/img/bg_3.jpg") 100% no-repeat fixed;
+}
+
+a {
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: azure;
+    text-decoration: underline;
+}
+
+
+/* Navigation */
+
+.color_accent {
+    color: lightskyblue;
+    font-size: 2rem;
+}
+
+.navbar-brand {
+    font-family: "Lobster";
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: lightskyblue !important;
+    text-decoration: underline;
+}
+
+/* Main Content */
+
+.h_content {
+    color: lightskyblue;
+}
+
+.p_content {
+    text-align: justify;
+    padding: 0% 1.5%;
+}
+
+.accordion-item {
+    background-color: #191b1f;
+}
+
+.accordion-button {
+    color: inherit;
+    font-size: 1.5rem;
+    background: #212529;
+}
+
+.accordion-button:not(.collapsed) {
+    color: lightskyblue;
+    background: #212529;
+    text-decoration: underline; 
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: grayscale(100%) invert(100%);
+}
+
+.bs_image {
+    max-width: 8% !important;
+    min-width: 6% !important;
+    margin: 0% 2%;
+}
+
+.dj_image {
+    max-width: 10% !important;
+    min-width: 8% !important;
+    margin: 0% 2%;
+}
+
+code {
+    font-size: 1rem !important;
+    color: gray;
+
+}
+
+.p_code {
+    background-color: #15161a;
+}
+
+.django_html {
+    color: violet;
+}
+
+.important_code {
+    color: lightgreen;
+}
+
+.profile_picture {
+    max-width: 50%;
+    border-radius: 10%;
+    box-shadow: #15161a 2px 2px;
+    margin: 0% 2%;
+}
+ .profilepic {
+     display: flexbox;
+     justify-content: center;
+ }
+
+/* Sudoku Solver */
+
+.p_solve_button {
+    text-align: center;
+    padding: auto;
+    margin: 2% 0%;
+}
+
+.btn {
+    font-size: 2rem !important;
+}
+
+.p_failsafe {
+    text-align: justify;
+    color: orangered;
+    padding: 0% 2%;
+    background-color: #191b1f;
+}
+
+.sudoku_input_row {
+    display: flex;
+    justify-content: center;
+}
+
+.sudoku_input_block {
+    border: #191b1f 3px solid;
+}
+
+.input_number {
+    max-width: 100%;
+    margin: none;
+    background: #212529;
+    border: none;
+    color: inherit;
+    text-align: center;
+    outline: none;
+}
+
+.input_number:focus {
+    outline: none;
+}
+
+.sudoku_input_table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hide Arrows: Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide Arrows: Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+td, tr {
+    padding: none;
+    margin: none;
+}
+
+td {
+    max-width: 50px;
+    border: rgb(59, 59, 59) solid;
+}
+
+.display_number {
+    width: 50px;
+    text-align: center;
+}
+
+.display_segment {
+    display: flex;
+    justify-content: center;
+}
+
+.block_table {
+    border: #191b1f 3px solid;
+}
+
+@media screen and (max-width: 500px) {
+
+    td {
+        max-width: 40px;
+        border: rgb(59, 59, 59) solid;
+    }
+
+    .display_number {
+        width: 40px;
+        text-align: center;
+    }
+
+} 
+
+
+@media screen and (max-width: 400px) {
+
+    td {
+        max-width: 30px;
+        border: rgb(59, 59, 59) solid;
+    }
+
+    .display_number {
+        width: 30px;
+        text-align: center;
+    }
+
+}
